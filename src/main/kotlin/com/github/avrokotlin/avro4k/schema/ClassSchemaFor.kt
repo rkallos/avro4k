@@ -54,7 +54,7 @@ class ClassSchemaFor(
       resolvedSchemas[naming]?.let { return it }
 
       // create new schema without fields
-      val record = Schema.createRecord(naming.name, entityAnnotations.doc(), naming.namespace, false)
+      val record = Schema.createRecord(naming.name, entityAnnotations.doc(), naming.namespace, entityAnnotations.isError())
 
       // add schema without fields right now, so that fields could recursively use it
       resolvedSchemas[naming] = record

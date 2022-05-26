@@ -28,5 +28,6 @@ class AnnotationExtractor(private val annotations: List<Annotation>) {
    fun props(): List<Pair<String, String>> = annotations.filterIsInstance<AvroProp>().map { it.key to it.value }
    fun default(): String? = annotations.filterIsInstance<AvroDefault>().firstOrNull()?.value
    fun enumDefault(): String? = annotations.filterIsInstance<AvroEnumDefault>().firstOrNull()?.value
+   fun isError(): Boolean = annotations.filterIsInstance<AvroIsError>().isNotEmpty()
 }
 

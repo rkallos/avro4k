@@ -1,0 +1,15 @@
+{
+    "type": "error",
+    "name": "Error",
+    "namespace": "com.github.avrokotlin.avro4k.schema.AvroIsErrorSchemaTest",
+    "fields": [
+        {
+            "name": "code",
+            "type": "int"
+        },
+        {
+            "name": "reason",
+            "type": "string"
+        }
+    ]
+}

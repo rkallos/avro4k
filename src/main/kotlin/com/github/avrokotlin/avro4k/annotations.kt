@@ -62,3 +62,7 @@ annotation class AvroDefault(val value: String)
 @SerialInfo
 @Target(AnnotationTarget.CLASS)
 annotation class AvroEnumDefault(val value: String)
+
+@SerialInfo
+@Target(AnnotationTarget.CLASS)
+annotation class AvroIsError
